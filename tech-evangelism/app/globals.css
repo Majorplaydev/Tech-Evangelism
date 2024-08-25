@@ -2,32 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+
+@font-face {
+  font-family: 'Archivo';
+  src: url('../app/Assets/Fonts/Archivo/OTF/Archivo-Regular.otf') format('opentype');
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@font-face {
+  font-family: 'Archivo-light';
+  src: url('../app/Assets/Fonts/Archivo/OTF/Archivo-Light.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Archivo-thin';
+  src: url('../app/Assets/Fonts/Archivo/OTF/Archivo-Thin.otf') format('opentype');
+}
+@font-face {
+  font-family: 'FkScreamer';
+  src: url('../app/Assets/Fonts/Screamer/FKScreamer-Black.woff2') format('woff2'); ;
+}
+@font-face {
+  font-family: 'FkStudio';
+  src: url('../app/Assets/Fonts/Screamer/StudioPro-Regular.woff2') format('woff2'); ;
+}
+@font-face {
+  font-family: 'AngelList';
+  src: url('../app/Assets/Fonts/Angellist/AngelList-VF.woff2') format('woff2'); ;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .center{
+    @apply mx-9 ;
+  }
+
+  .section-heading{
+    @apply text-black text-3xl font-thin font-['Archivo-thin'] leading-tight mt-7 mb-24;
+  }
+  
+  .text-color-purple{
+    @apply  text-[#CDCBFF]
+  }
+  .bg-green{
+    @apply bg-[#001D21]
+  }
+  .bg-yellow{
+    @apply bg-[#FFE05F]
   }
 }
